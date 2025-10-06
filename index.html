@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Phone Site</title>
+  <style>
+    body {
+      font-family: system-ui, Arial;
+      margin: 0;
+      padding: 2rem;
+      background: #f6f8fb;
+    }
+    .card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 1.6rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    }
+    button {
+      padding: .6rem 1.1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>My Test Website</h1>
+    <p id="msg">Hello — this runs on your phone.</p>
+    <button id="btn">Click me</button>
+  </div>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', () => {
+      document.getElementById('msg').textContent = 'Clicked at ' + new Date().toLocaleTimeString();
+    });
+  </script>
+</body>
+</html>
